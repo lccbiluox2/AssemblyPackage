@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>AssemblyPackage</artifactId>
+        <groupId>com.lcc</groupId>
+        <!--所有的都必须统一，如果为写死的数字，那么都要为数字，否则都要是变量形式，不然会报错-->
+        <version>${AssemblyPackage.version}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>assembly</artifactId>
+
+    <properties>
+        <!--所有的都必须统一，如果为写死的数字，那么都要为数字，否则都要是变量形式，不然会报错-->
+        <assembly.name>romance-v${AssemblyPackage.version}</assembly.name>
+        <assembly.format>tgz</assembly.format>
+        <skipDeploy>true</skipDeploy>
+    </properties>
+
+    <!--<dependencies>-->
+        <!--<dependency>-->
+            <!--<artifactId>romance-provider</artifactId>-->
+            <!--<groupId>com.dtwave.ldap</groupId>-->
+            <!--<version>${AssemblyPackage.version}</version>-->
+        <!--</dependency>-->
+    <!--</dependencies>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>${assembly.name}</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <descriptors>
+                                <descriptor>assembly.xml</descriptor>
+                            </descriptors>
+                            <outputDirectory>${project.parent.basedir}/dist</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

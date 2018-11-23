@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AssemblyPackage.iml" filepath="$PROJECT_DIR$/AssemblyPackage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HiveMoudle/HiveMoudle.iml" filepath="$PROJECT_DIR$/HiveMoudle/HiveMoudle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RomanceMoudle/RomanceMoudle.iml" filepath="$PROJECT_DIR$/RomanceMoudle/RomanceMoudle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SparkMoudle/SparkMoudle.iml" filepath="$PROJECT_DIR$/SparkMoudle/SparkMoudle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assembly/assembly.iml" filepath="$PROJECT_DIR$/assembly/assembly.iml" />
+    </modules>
+  </component>
+</project>
